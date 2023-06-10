@@ -1,0 +1,110 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Barlow', sans-serif;
+    overflow-x: hidden;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li{
+    list-style: none;
+    margin: 10px 20px;
+}
+nav li:first-child img{
+    height: 20px;
+}
+
+nav li:first-child{
+    margin-right: auto;
+}
+
+nav li:last-child{
+    margin-left: auto;
+}
+
+nav li button{
+    color: white;
+    background-color: blue;
+    padding: 5px 10px;
+    border: 0px;
+    border-radius: 20px;
+}
+
+section {
+    padding-top: 150px;
+    display: flex;
+    flex-wrap:wrap;
+}
+
+section h1 {
+    margin-left: 150px;
+    font-size: 40px;
+}
+
+section .img1 {
+    height: 400px;
+    width: 60vw;
+    border-radius: 20px;
+    margin-left: auto;
+    object-fit: cover;
+    transform: translate(20%,-10%);
+}
+
+section .img2 {
+    height: 500px;
+    width: 60vw;
+    border-radius: 20px 20px 0px 0px;
+    margin-right: auto;
+    object-fit: cover;
+    transform: translate(-20%,-30%);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+
+main .right img {
+    border-radius: 20px;
+}
+
+main .left {
+    display: grid;
+    padding: 30px;
+    grid-template-rows: repeat(5,20%);
+}
+
+main .left .option {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    /* border: black solid; */
+}
+
+main .left .option img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    padding: 20px;
+}
+
+main .left .option .content {
+    padding-top: 20px ;
+    text-align: left;
+    
+    
+}
+
+footer {
+    margin-top: 40px;
+    background-color: cornflowerblue;
+    border-radius: 20px 20px;
+}
