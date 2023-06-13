@@ -1,0 +1,107 @@
+.topnav {
+    background-color:darkcyan;
+    text-align: center;
+    padding: 20px 20px;
+    
+}
+
+.topnav a {
+    float: center;
+    color: #530a0a;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 20px;
+}
+
+.topnav a:hover {
+    color: rgb(47, 6, 94);
+    background-color: azure;
+}
+
+.aboutme {
+   margin:auto;
+   width: 1200px;
+}
+
+.aboutme h1 {
+    text-align: center;
+}
+
+.myskills {
+    width: max-content;
+    margin: auto;
+    font-size: 24px;
+    text-align: left;
+    background-color: aquamarine;
+    padding: 2% 2% 2% 2%;
+}
+
+.myskills h1{
+    text-align: center;
+}
+
+.contact {
+    width: max-content;
+    list-style-type: none;
+    margin: auto;
+    text-align: left;
+    font-size: 24px;
+    background-color: aquamarine;
+    padding: 2% 2% 2% 2%;
+}
+
+.contact h1 {
+    text-align: center;
+    font-size: 26px;
+    color: blue;
+}
+
+.search_bar {
+    width: 100%;
+    border: black solid;
+    margin: auto;
+    padding: 10px 10px 10px 10px;
+    box-sizing: border-box;
+    
+}
+
+.search_bar p {
+    font: 30px bold;
+}
+
+.portfolio {
+    width: 100%;
+    padding: 2% 2% 2% 2%;
+    margin: auto;
+    border: black solid;
+}
+
+td {
+    width: 250px;
+    padding: 2% 2% 2% 2%;
+    box-sizing: border-box;
+    margin: auto;
+    border: navy solid;
+    text-align: left;
+    font-size: 20px;
+}
+ 
+h1 {
+    margin: inherit;
+    width: inherit;
+    text-align: center;
+    font-size: 30px;
+    
+}
+
+h2{
+    text-align: center;
+    font-size: 24px;
+}
+
+.aboutme p {
+    width: 1200px;
+    text-indent: 100px;
+    text-align:auto;
+    overflow: auto;
+}

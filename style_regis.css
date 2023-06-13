@@ -1,0 +1,53 @@
+div {
+    background-color: rgb(157, 223, 126);
+    width: ;
+    padding: 2% 2% 2% 2%;
+    margin: auto;
+    }
+
+table, th, td {
+    /*width: 1000px;*/
+    margin: auto;
+    }
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+label {
+    padding: 3px;
+    box-sizing: border-box;
+    text-align: left;
+}
+input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+.info {
+    width: 350px;
+}
+
+.submit_button {
+    width:max-content;
+    margin: auto;
+}
+
+input[type=submit] {
+    width: 200px;
+    background-color: #04AA6D;
+    color: white;
+}
+input[type=reset] {
+    width: 200px;
+}
+
+hr {
+    color: brown;
+    height: 2px;
+}

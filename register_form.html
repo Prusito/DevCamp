@@ -1,0 +1,77 @@
+    
+</body>
+</html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style_regis.css">
+        <title>Registration Form</title>
+    </head>
+<body>
+    <div>
+    <h1>Registration Form</h1>
+    <br>
+    <div class="container">
+        <form action="action_page.php">
+            <table>
+                <hr>
+                <tr>
+                    <td> <label for="fname">First Name</label></td>
+                    <td><input class="info" type="text" placeholder="Enter First Name" name="fname" id="fname" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="lname">First Name</label> </td>
+                    <td><input class="info" type="text" placeholder="Enter Last Name" name="lname" id="lname" required></td>
+                </tr>
+                
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td><input class="info" type="email" placeholder="Enter Email" name="email" id="email" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="psw">Password</label></td>
+                    <td><input class="info" type="password" placeholder="Enter Password" name="psw" id="psw" required></td>                         
+                </tr>
+                
+                <tr>
+                    <td><label for="psw-repeat">Repeat Password</label></td>
+                    <td><input class="info" type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required></td>
+                </tr>
+                
+                <tr>
+                    <td><label for="birthdate">Birthdate</label></td>
+                    <td><input class="info" type="date" name="birthdate" id="birthdate"></td>
+                </tr>
+
+                <tr>
+                   
+                    <td><label for="gender">Gender</label></td>
+                        <div class="gender_check">
+                            <td>
+                                <input type="radio" id="male" name="gender" value="Male" checked="yes">
+                                <label for="male">Male</label>
+                            </td>
+
+                            <td>
+                                <input type="radio" id="female" name="gender" value="Female">
+                                <label for="female">Female</label>
+                            </td>
+                        </div>             
+                       
+                </tr>
+            
+            </table>
+    </div>
+            <hr>
+            <div class="submit_button">
+            <input type="submit"> <input type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+
+    
+</body>
+</html>
