@@ -99,9 +99,44 @@ main .left .option img {
 main .left .option .content {
     padding-top: 20px ;
     text-align: left;
-    
-    
 }
+
+.property {
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.property h1 {
+    margin-bottom: 100px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 10px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-right: 10px;
+    /* border: 1px black solid; */
+}
+.card img {
+    width: 100%;
+}
+
+.feature {
+    display: grid;
+    grid-row: 100px;
+    border: 1px black solid;
+    text-align: left;
+}
+.feature div img {
+    width: 50px;
+}
+
+
 
 footer {
     margin-top: 40px;
