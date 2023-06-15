@@ -228,4 +228,55 @@ footer {
     margin-top: 40px;
     background-color: cornflowerblue;
     border-radius: 20px 20px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+footer header {
+    display:  flex;
+    justify-content: space-between;
+}
+
+footer header h1 {
+    margin-left: 100px;
+    margin-top: 100px;
+}
+footer header button {
+    margin-top: 100px;
+    margin-right: 100px;
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    border: 0px;
+    color: white;
+    background-color: blue;
+}
+
+footer .content {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+}
+footer .content ul {
+    width: 80%;
+    margin-left: 100px;
+}
+footer .content li {
+    margin-top: px;
+}
+footer .content ul li:first-child{
+    font-size: 20px;
+}
+footer .copyright{
+    margin-top: 50px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+footer .copyright img{
+    width: 400px;
+
 }
