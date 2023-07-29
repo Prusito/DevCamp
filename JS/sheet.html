@@ -23,8 +23,8 @@
 
       // TODO(developer): Set to client ID and API key from the Developer Console
       const CLIENT_ID =
-        "905431810817-lfj2dsq25sgj2e56r3vo1orcn7sdgd3o.apps.googleusercontent.com";
-      const API_KEY = "AIzaSyDT1Gs037OPq_avhryPMSq6MmbovSGbU68";
+        "498649318358-klvjr8k8moq6ph0glog3eo81aj8h9ae4.apps.googleusercontent.com";
+      const API_KEY = "AIzaSyDeJWRIaul_YL-GuDt1H_OzjyG23u_jCO0";
 
       // Discovery doc URL for APIs used by the quickstart
       const DISCOVERY_DOC =
@@ -131,8 +131,9 @@
         try {
           // Fetch first 10 files
           response = await gapi.client.sheets.spreadsheets.values.get({
-            spreadsheetId: "1jmiUHs5_1B-h2QFFqRhkCBO5wMKGZYsLsgr-TV5_oug",
-            range: "sheet1",
+            spreadsheetId:
+              "1TOB9llsKIv9hDxBukRY8vFuEjSDkHjrV4MI1HmzhGNw",
+            range: "Sheet1",
           });
         } catch (err) {
           document.getElementById("content").innerText = err.message;
@@ -145,15 +146,15 @@
         }
         // Flatten to string to display
         const output = range.values;
-        const content = document.getElementById("content");
-        console.log(output);
+        //const content = document.getElementById("content");
+        console.log(response);
         for (let i = 1; i < output.length; i++) {
-          content.innerHTML += `<div class="card">
-            <img src="${output[i][3]}" />
-                <p>Id : ${output[i][0]} <p/>
-                <h2>Name : ${output[i][1]} <h2/>
-                <h3>Value : ${output[i][2]} <h3/>
-                    <div/>`;
+        content.innerHTML += `<div class="card">
+        <img src="${output[i][3]}" />
+        <p>Id : ${output[i][0]} <p/>
+        <h2>Name : ${output[i][1]} <h2/>
+        <h3>Value : ${output[i][2]} <h3/>
+        <div/>`;
         }
       }
     </script>
