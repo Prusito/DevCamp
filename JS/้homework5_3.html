@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homework 5.3</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="./homework5_1.css" />
+</head>
+<body>
+  <h1>Hello ReqRes User</h1>
+  <div>
+    <table>
+      <tr class="rowdisplay" id="rowdisplay"></tr>
+
+    </table>
+  </div>
+
+  <script>
+     let users = {
+        "id": [],
+        "email": [],
+        "first_name": [],
+        "last_name": [],
+        "gender": [],
+        "age": [],
+        "avatar": []
+    };
+    axios
+      .get("https://reqres.in/api/users/")
+      .then(function (response) {
+        let userData = response.data.data;
+        let tableRow = document.getElementById("rowdisplay");
+
+        for (let i = 0; i < userData.length; i++) {
+          axios
+            .get(`https://api.genderize.io?name=${userData[i].first_name}`)
+            .then(function (response) {
+              let userGender = response.data.gender;
+              users.gender.push(userGender);
+              axios
+                .get(`https://api.agify.io?name=${userData[i].first_name}`)
+                .then(function (response) {
+                  let userAge = response.data.age;
+                  users.age.push(userAge);
+
+                  let userName = "<p>" + userData[i].first_name + "</p>";
+                  let userImg = "<p><img src='" + userData[i].avatar + "'></p>";
+                  let userEmail = "<p>" + userData[i].email + "</p>";
+                  let userAgeHtml = "<p>" + userAge + "</p>";
+                  let userGend = "<p>" + userGender + "</p>";
+
+                  tableRow.innerHTML +=
+                    "<td>" +
+                    userName +
+                    userEmail +
+                    userGend +
+                    userAgeHtml +
+                    userImg +
+                    "</td>";
+                })
+                .catch(function (error) {
+                  console.error("Error fetching age data:", error);
+                });
+            })
+            .catch(function (error) {
+              console.error("Error fetching gender data:", error);
+            });
+        }
+      })
+      .catch(function (error) {
+        console.error("Error fetching user data:", error);
+      });
+  </script>
+</body>
+</html>

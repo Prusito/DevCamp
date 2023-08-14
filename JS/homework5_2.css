@@ -1,0 +1,36 @@
+
+h1 {
+    width:max-content;
+    font-size: 50px;
+    color: red;
+    padding: 20px;
+    margin: auto;
+}
+
+table {
+    width: max-content;
+    margin: auto;
+}
+
+.covidDataHeader td {
+    width: max-content;
+    margin: auto;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    border: thin;
+    border-color: black;
+    border-style: solid;
+    background-color: beige;
+}
+
+.covidData td{
+    width: max-content;
+    background-color: none;
+    font-size: 16px;
+    text-align: center;
+    border: thin;
+    border-color: black;
+    border-style: solid;
+    padding: 5px;
+}

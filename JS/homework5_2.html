@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>homework5_2</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="./homework5_2.css" />
+</head>
+<body>
+
+<h1 class="header">Covid Data</h1>
+<div id="resultDisplay"></div>
+<table>
+  <tr class="covidDataHeader" id="rowDisplay">
+    <td>Category</td>
+    <td>cases</td>
+    <td>todaycases</td>
+    <td>deaths</td>
+    <td>todayDeath</td>
+    <td>recovered</td>
+    <td>todayRecovered</td>
+    <td>Active</td>
+    <td>Critical</td>
+  </tr>
+  <tr class="covidData" id="worldRow">
+    <td>World</td>
+    <td id="worldCases"></td>
+    <td id="worldTodayCases"></td>
+    <td id="worldDeaths"></td>
+    <td id="worldTodayDeaths"></td>
+    <td id="worldRecovered"></td>
+    <td id="worldTodayRecovered"></td>
+    <td id="worldActive"></td>
+    <td id="worldCritical"></td>
+  </tr>
+  <tr class="covidData" id="thailandRow">
+    <td>Thailand</td>
+    <td id="thailandCases"></td>
+    <td id="thailandTodayCases"></td>
+    <td id="thailandDeaths"></td>
+    <td id="thailandTodayDeaths"></td>
+    <td id="thailandRecovered"></td>
+    <td id="thailandTodayRecovered"></td>
+    <td id="thailandActive"></td>
+    <td id="thailandCritical"></td>
+  </tr>
+</table>
+
+<script>
+  let covidData = {
+    "World": {},
+    "Thailand": {}
+  };
+
+  function getData1(callback) {
+    axios.get("https://corona.lmao.ninja/v3/covid-19/all")
+      .then(function(response) {
+        covidData.World = response.data;
+        callback();
+      })
+      .catch(function(error) {
+        console.error("Error fetching data:", error);
+      });
+  }
+
+  function getData2(callback) {
+    axios.get("https://corona.lmao.ninja/v3/covid-19/countries/thailand")
+      .then(function(response) {
+        covidData.Thailand = response.data;
+        callback();
+      })
+      .catch(function(error) {
+        console.error("Error fetching data:", error);
+      });
+  }
+
+  getData1(function() {
+    getData2(function() {
+      document.getElementById('worldCases').textContent = covidData.World.cases;
+      document.getElementById('worldTodayCases').textContent = covidData.World.todayCases;
+      document.getElementById('worldDeaths').textContent = covidData.World.deaths;
+      document.getElementById('worldTodayDeaths').textContent = covidData.World.todayDeaths;
+      document.getElementById('worldRecovered').textContent = covidData.World.recovered;
+      document.getElementById('worldTodayRecovered').textContent = covidData.World.todayRecovered;
+      document.getElementById('worldActive').textContent = covidData.World.active;
+      document.getElementById('worldCritical').textContent = covidData.World.critical;
+
+      document.getElementById('thailandCases').textContent = covidData.Thailand.cases;
+      document.getElementById('thailandTodayCases').textContent = covidData.Thailand.todayCases;
+      document.getElementById('thailandDeaths').textContent = covidData.Thailand.deaths;
+      document.getElementById('thailandTodayDeaths').textContent = covidData.Thailand.todayDeaths;
+      document.getElementById('thailandRecovered').textContent = covidData.Thailand.recovered;
+      document.getElementById('thailandTodayRecovered').textContent = covidData.Thailand.todayRecovered;
+      document.getElementById('thailandActive').textContent = covidData.Thailand.active;
+      document.getElementById('thailandCritical').textContent = covidData.Thailand.critical;
+    });
+  });
+
+</script>
+</body>
+</html>

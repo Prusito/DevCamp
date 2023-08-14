@@ -10,7 +10,7 @@
             "province": "จังหวัด"
         },
         "contact": {
-            "mobiel": "เบอร์โทรศัพท์",
+            "mobile": "เบอร์โทรศัพท์",
             "email": "อีเมล์"
         }
     },
@@ -25,7 +25,7 @@
             "province": "Ratchaburi"
         },
         "contact": {
-            "mobiel": "0816895852",
+            "mobile": "0816895852",
             "email": "thanat@aksornsil.com"
         }
     },
